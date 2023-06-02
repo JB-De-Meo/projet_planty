@@ -10,12 +10,40 @@ Text Domain: astra-child
 Template: astra
 */
 
-
-
-.page-id-37 {background-color:#3D9448;}
+.wpcf7-form-control{
+    border-radius: 8px !important; 
+    margin-top: 10px;
+   
+}
     
 
-  
 
+
+.wpcf7-textarea{
+    width:383px !important; 
+    height: 237px !important;
+}
+
+.wpcf7-email{
+    height: 71px !important;
+    width: 383px !important;}
+
+.wpcf7-text{
+    height: 71px !important;
+    width: 383px !important;}
+
+.wpcf7-submit{
+    background-color: #E0B9B4 !important;
+    width: 198px !important;
+    height: 55px !important;
+    margin-left: 6rem !important;   
+}
+
+.wpcf7-submit:hover{background-color: #C02E44 !important;}
+
+.label{
+    font-weight: 400 !important;
+    font-size: 100px !important;
+}
 
 
