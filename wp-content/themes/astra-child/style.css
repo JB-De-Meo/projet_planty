@@ -47,3 +47,25 @@ Template: astra
 }
 
 
+
+.cf7resp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    width: 50%;
+   
+    
+}
+
+#go{
+   background-color:  gold !important;
+   margin: 10% !important;
+   align-items: center !important;
+
+   
+}
+
+.cf7resp p:nth-child(7){
+    grid-column-start: 1 !important;
+    grid-column-end: 3 !important;
+}
