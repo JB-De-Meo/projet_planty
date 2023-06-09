@@ -53,14 +53,15 @@ Template: astra
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     width: 50%;
-   
+    column-gap: 40px;
     
-}
 
+}
+   
 #go{
-   background-color:  gold !important;
+   
    margin: 10% !important;
-   align-items: center !important;
+   align-items: center !important;  
 
    
 }
@@ -68,4 +69,77 @@ Template: astra
 .cf7resp p:nth-child(7){
     grid-column-start: 1 !important;
     grid-column-end: 3 !important;
+}
+
+#wpcf7-f125-p37-o1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} 
+
+.tab{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+/* taille des img formulaire commande */
+.cmd{
+    width: 193px;
+    height: 128px;
+}
+
+#compteur1{
+   width: 51px;
+   height: 56px;
+   border-radius: 4px 0px 0px 4px;
+
+}
+
+.inline{
+   
+}
+
+.row{
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.column{
+    display: flex !important;
+    flex-direction: column !important;
+    width: px !important;
+    height:56px !important;
+    background-color: yellow;
+}
+
+.valide{
+    display: flex !important;
+    justify-content: center !important;
+    width: 100px !important;
+    height: 56px !important;
+    margin-left: 10px !important;
+    margin: none;
+    padding-top: 15px;
+    color: white;
+    border-radius: 4px;
+    
+
+}
+
+.plus, .moins{
+    width: 31px !important;
+    height: 28px !important;
+    display: flex !important;
+    text-align: center !important;
+    justify-content:center !important;color: white;
+} 
+.plus{
+    border-bottom: solid white 0.5px;
+    border-radius: 0px 4px 0px 0px;
+}
+
+.moins{
+    border-top: solid white 0.5px;
+    border-radius: 0px 0px 4px 0px;
 }
