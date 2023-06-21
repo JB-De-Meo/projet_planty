@@ -12,6 +12,11 @@ Template: astra
 
 
 
+.complet{
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .color{
     color: white !important;
 }
@@ -20,8 +25,13 @@ Template: astra
 
 .wpcf7-form-control{
     border-radius: 8px !important; 
-    margin-top: 10px;
-   
+    margin-top: 10px; 
+}
+
+.form{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 .wpcf7-textarea{
@@ -51,23 +61,40 @@ Template: astra
     font-size: 100px !important;
 }
 
-
-
 .cf7resp{
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between;
-    height: 422px;
 }
 
 
-@media screen and (max-width:800px){
-    .cf7resp{width: 85% !important;}  
+@media screen and (max-width:900px){
+    .cf7resp{display: flex; flex-direction: column !important;}   
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:900px){
+    .tab {grid-template-columns: 1fr !important;}
 }
 
+@media screen and (max-width:1200px){
+    .wp-block-uagb-container{padding: 0% !important;}
+   }
+
+@media screen and (max-width:900px){
+    .info1{border: none !important;}
+}
+
+@media screen and (max-width:900px){
+    .h2_cmd{text-align: center !important;}
+}
+
+@media screen and (max-width:960px){
+ 
+}
+
+.wp-block-image, .alignwide, .size-large{
+    margin: 0% !important;
+}
 
 .h3_cmd, .h2_cmd{
     color: white !important;
