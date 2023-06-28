@@ -14,8 +14,6 @@
  */
 define( 'CHILD_THEME_ASTRA_CHILD_VERSION', '1.0.0' );
 
-add_action('wp_footer', 'afficher_emplacements_de_menu');
-
 /**
  * Enqueue styles
  */
@@ -32,7 +30,7 @@ function ajouter_lien_admin_menu($items, $args) {
     if (is_user_logged_in() && $args->theme_location === 'primary') {
         // Créer le lien d'administration
         $admin_link = '<li class="menu-item menu-item-type-custom">';
-        $admin_link .= '<a href="' . admin_url() . '">Administrator</a>';
+        $admin_link .= '<a href="' . admin_url() . '">Admin</a>';
         $admin_link .= '</li>';
         // Ajouter le lien d'administration au menu
         $items .= $admin_link;

@@ -88,9 +88,6 @@ Template: astra
     .h2_cmd{text-align: center !important;}
 }
 
-@media screen and (max-width:960px){
- 
-}
 
 .wp-block-image, .alignwide, .size-large{
     margin: 0% !important;
@@ -104,7 +101,7 @@ Template: astra
     font-size:20px !important;
 }
 
-.info1, .info2{
+.info1{
     display: flex;
     flex-direction: column;
     margin-bottom: 0% !important;
@@ -114,6 +111,13 @@ Template: astra
 .info1{
     width: 50%;
     border-right: solid 1px white;
+}
+
+.info2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0% !important;
+    font-size: 20px;
 }
 
 .submit{
@@ -158,7 +162,7 @@ Template: astra
     height: 128px;
 }
 
-#compteur1{
+#compteur1, #compteur2, #compteur3, #compteur4{
    width: 51px;
    height: 56px;
    border-radius: 8px 0px 0px 8px;
@@ -180,7 +184,6 @@ Template: astra
 .column{
     display: flex !important;
     flex-direction: column !important;
-    width: px !important;
     height:56px !important;
 }
 
@@ -220,4 +223,8 @@ Template: astra
 #block-5ca0767c-2e81-4fb7-b61e-0865472e9de2{
     margin: none !important;
     padding: none !important;
+}
+
+p.fruit {
+    margin-bottom: 0px !important;
 }
