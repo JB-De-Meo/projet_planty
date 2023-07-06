@@ -193,7 +193,7 @@ Template: astra
     width: 100px !important;
     height: 56px !important;
     margin-left: 10px !important;
-    margin: none;
+    margin: 0px;
     padding-top: 15px;
     color: white;
     border-radius: 8px; 
@@ -214,17 +214,59 @@ Template: astra
 }
 
 .moins{
-    border-top: solid white 0.1;
+    border-top: solid white 0.1px;
     border-radius: 0px 0px 8px 0px;
 }
 
 
 
 #block-5ca0767c-2e81-4fb7-b61e-0865472e9de2{
-    margin: none !important;
-    padding: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 p.fruit {
     margin-bottom: 0px !important;
+}
+
+
+
+
+
+/* Media query à partir de 500px */
+@media screen and (max-width: 500px) {
+    .wpcf7-textarea,
+    .wpcf7-email,
+    .wpcf7-text,
+    .form
+     {
+      max-width: 100%;
+    }
+  
+    .info1,
+    .info2 {
+      width: 80vw;
+    }
+  
+    .cf7resp {
+      align-items: center;
+    }
+  }
+
+  /* Media query à partir de 500px */
+@media screen and (max-width: 500px) {
+    .wpcf7-textarea, .wpcf7-form-control, .wpcf7-text, .wpcf7-email, .wpcf7-validates-as-required, .wpcf7-validates-as-email
+    
+     {
+      max-width: 80vw;
+      align-items: center;
+    }
+   
+  }
+
+   
+  
+.form .wpcf7-submit{
+    width: 100% !important;
+    margin-left: 0px !important;  
 }

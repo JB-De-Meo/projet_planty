@@ -184,6 +184,10 @@ if ( ! class_exists( 'UAGB_Post' ) ) {
 								'type'    => 'boolean',
 								'default' => false,
 							),
+							'paginationType'              => array(
+								'type'    => 'string',
+								'default' => 'ajax',
+							),
 						)
 					),
 					'render_callback' => array( $this, 'post_grid_callback' ),
@@ -1762,7 +1766,12 @@ if ( ! class_exists( 'UAGB_Post' ) ) {
 										}
 									}
 								}
-								if ( ! $scope.hasClass('is-carousel') || cols >= $scope.children('article.uagb-post__inner-wrap').length ) {
+								// If this is not a Post Carousel, return.
+								// Else if it is a carousel but has less posts than the number of columns, return after setting visibility.
+								if ( ! $scope.hasClass('is-carousel') ) {
+									return;
+								} else if ( cols >= $scope.children('article.uagb-post__inner-wrap').length ) {
+									$scope.css( 'visibility', 'visible' );
 									return;
 								}
 								var slider_options = {
@@ -1821,8 +1830,14 @@ if ( ! class_exists( 'UAGB_Post' ) ) {
 				}
 			}
 
-			if ( isset( self::$settings['grid'] ) && ! empty( self::$settings['grid'] ) ) {
+			if ( ! empty( self::$settings['grid'] ) && is_array( self::$settings['grid'] ) ) {
 				foreach ( self::$settings['grid'] as $key => $value ) {
+					if ( empty( $value ) || ! is_array( $value ) ) {
+						return; // Exit early if this is not the attributes array.
+					}
+					if ( ! empty( $value['paginationType'] ) && 'ajax' !== $value['paginationType'] ) { 
+						return; // Early return when pagination type exists and is not ajax.
+					}
 					?>
 
 					<script type="text/javascript" id="<?php echo esc_attr( $key ); ?>">

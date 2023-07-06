@@ -27,7 +27,8 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
  */
 function ajouter_lien_admin_menu($items, $args) {
     // Vérifier si l'utilisateur est connecté et a le rôle d'administrateur
-    if (is_user_logged_in() && $args->theme_location === 'primary') {
+    if (is_user_logged_in() && ($args->theme_location === 'primary'or $args->theme_location === 'mobile_menu')){
+        
         // Créer le lien d'administration
         $admin_link = '<li class="menu-item menu-item-type-custom">';
         $admin_link .= '<a href="' . admin_url() . '">Admin</a>';
